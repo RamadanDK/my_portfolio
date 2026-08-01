@@ -1,0 +1,1264 @@
+<!DOCTYPE html>
+<html lang="id" class="">
+<head>
+  <!-- ─── Meta ─────────────────────────────────────────────── -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- SEO -->
+  <title>DevStudio — Premium Web Developer Portfolio</title>
+  <meta name="description" content="Web Developer profesional yang membantu bisnis, sekolah, organisasi, UMKM, dan personal brand membangun website modern, cepat, dan menarik." />
+  <meta name="keywords" content="web developer, portfolio, website profesional, landing page, website sekolah, website UMKM, SEO" />
+  <meta name="author" content="DevStudio" />
+  <link rel="canonical" href="https://devstudio.dev" />
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://devstudio.dev" />
+  <meta property="og:title"       content="DevStudio — Premium Web Developer Portfolio" />
+  <meta property="og:description" content="Web Developer profesional yang membantu bisnis membangun website modern, cepat, dan menarik." />
+  <meta property="og:image"       content="https://devstudio.dev/assets/images/og-cover.jpg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="DevStudio — Premium Web Developer Portfolio" />
+  <meta name="twitter:description" content="Web Developer profesional yang membantu bisnis membangun website modern." />
+  <meta name="twitter:image"       content="https://devstudio.dev/assets/images/og-cover.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230d9468'/><text y='.9em' font-size='70' x='12' fill='white' font-family='sans-serif' font-weight='900'>D</text></svg>" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#0d9468',
+            'primary-hover': '#0f766e',
+            accent: '#14b8a6'
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "DevStudio",
+    "jobTitle": "Web Developer & UI Designer",
+    "url": "https://devstudio.dev",
+    "sameAs": [
+      "https://instagram.com/devstudio",
+      "https://github.com/devstudio",
+      "https://linkedin.com/in/devstudio"
+    ],
+    "knowsAbout": ["Web Development", "UI/UX Design", "SEO", "Next.js", "Django", "JavaScript"]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ─── Loading Screen ─────────────────────────────────────── -->
+  <div id="loading-screen" role="status" aria-label="Loading">
+    <div class="loader-logo" aria-hidden="true">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+      </svg>
+    </div>
+    <div class="loader-name">DevStudio</div>
+    <div class="loader-sub">Web Developer Portfolio</div>
+    <div class="loader-bar-track">
+      <div class="loader-bar-fill" id="loader-fill"></div>
+    </div>
+    <div class="loader-percent" id="loader-percent">0%</div>
+  </div>
+
+  <!-- ─── Navbar ─────────────────────────────────────────────── -->
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+
+      <!-- Logo -->
+      <a href="#hero" class="nav-logo" aria-label="DevStudio Home">
+        <div class="nav-logo-icon" aria-hidden="true">D</div>
+        <span>DevStudio</span>
+      </a>
+
+      <!-- Desktop Links -->
+      <ul class="nav-links" role="list">
+        <li><a href="#hero"         class="nav-link">Home</a></li>
+        <li><a href="#about"        class="nav-link">About</a></li>
+        <li><a href="#services"     class="nav-link">Services</a></li>
+        <li><a href="#portfolio"    class="nav-link">Portfolio</a></li>
+        <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+        <li><a href="#faq"          class="nav-link">FAQ</a></li>
+        <li><a href="#contact"      class="nav-link">Contact</a></li>
+      </ul>
+
+      <!-- Actions -->
+      <div class="nav-actions">
+        <button id="dark-toggle" class="dark-toggle" aria-label="Toggle dark mode">
+          <!-- Moon icon (show in light mode) -->
+          <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+          <!-- Sun icon (show in dark mode) -->
+          <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+        </button>
+        <a href="#contact" class="btn-primary" aria-label="Contact me">
+          <span>Let's Talk</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="position:relative;z-index:1">
+            <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+          </svg>
+        </a>
+        <button id="hamburger" class="hamburger" aria-label="Open mobile menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Nav -->
+    <div id="mobile-nav" class="mobile-nav" role="list">
+      <a href="#hero"         class="nav-link" role="listitem">Home</a>
+      <a href="#about"        class="nav-link" role="listitem">About</a>
+      <a href="#services"     class="nav-link" role="listitem">Services</a>
+      <a href="#portfolio"    class="nav-link" role="listitem">Portfolio</a>
+      <a href="#testimonials" class="nav-link" role="listitem">Testimonials</a>
+      <a href="#faq"          class="nav-link" role="listitem">FAQ</a>
+      <a href="#contact"      class="nav-link" role="listitem">Contact</a>
+      <div style="display:flex;align-items:center;gap:.75rem;margin-top:.25rem">
+        <button id="dark-toggle-mob" class="dark-toggle" aria-label="Toggle dark mode">
+          <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="icon-sun"  width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </button>
+        <a href="#contact" class="btn-primary"><span>Let's Talk</span></a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main-content">
+
+  <!-- ═══════════════════════════════════════════════════════════
+       HERO SECTION
+  ══════════════════════════════════════════════════════════════ -->
+  <section id="hero" aria-labelledby="hero-title">
+    <div class="hero-left">
+      <!-- Badge -->
+      <div class="hero-badge reveal">
+        <span class="hero-badge-dot" aria-hidden="true"></span>
+        Available for Projects
+      </div>
+
+      <!-- Heading -->
+      <h1 class="hero-title reveal delay-1" id="hero-title">
+        Halo, Saya<br>
+        <span class="highlight">Web Developer</span><br>
+        Profesional
+      </h1>
+
+      <!-- Subtitle -->
+      <p class="hero-sub reveal delay-2">
+        Saya membantu bisnis, sekolah, organisasi, UMKM, dan personal brand 
+        membangun website modern yang <strong>cepat, profesional, dan menarik</strong>.
+      </p>
+
+      <!-- CTA Buttons -->
+      <div class="hero-cta reveal delay-3">
+        <a href="#portfolio" class="btn-primary" id="hero-cta-portfolio" aria-label="Lihat Portfolio">
+          <span>Lihat Portfolio</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="position:relative;z-index:1">
+            <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+          </svg>
+        </a>
+        <a href="#contact" class="btn-outline" id="hero-cta-contact" aria-label="Hubungi Saya">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.63A2 2 0 012.18 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.15a16 16 0 006.29 6.29l1.51-1.51a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 15z"/>
+          </svg>
+          Hubungi Saya
+        </a>
+      </div>
+
+      <!-- Mini stats -->
+      <div class="hero-stats reveal delay-4">
+        <div class="hero-stat">
+          <div class="hero-stat-num"><span>50</span>+</div>
+          <div class="hero-stat-label">Project Selesai</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num"><span>30</span>+</div>
+          <div class="hero-stat-label">Klien Puas</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num"><span>5</span>+</div>
+          <div class="hero-stat-label">Tahun Pengalaman</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: Visual Mockup -->
+    <div class="hero-right reveal-right delay-2">
+      <div class="hero-visual">
+        <!-- Glow blobs -->
+        <div class="floating-shape shape-1" data-speed="0.5" aria-hidden="true"></div>
+        <div class="floating-shape shape-2" data-speed="0.3" aria-hidden="true"></div>
+        <div class="floating-shape shape-3" data-speed="0.7" aria-hidden="true"></div>
+
+        <!-- Browser Mockup -->
+        <div class="hero-mockup" aria-hidden="true">
+          <div class="mockup-topbar">
+            <div class="mockup-dot"></div>
+            <div class="mockup-dot"></div>
+            <div class="mockup-dot"></div>
+            <div class="mockup-urlbar">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              devstudio.dev
+            </div>
+          </div>
+          <div class="mockup-body">
+            <div class="mockup-hero-block"></div>
+            <div class="mockup-line"></div>
+            <div class="mockup-line" style="width:80%"></div>
+            <div class="mockup-line" style="width:65%"></div>
+            <div class="mockup-cards">
+              <div class="mockup-card">
+                <div class="mockup-card-dot"></div>
+                <div class="mockup-card-line"></div>
+                <div class="mockup-card-line"></div>
+              </div>
+              <div class="mockup-card">
+                <div class="mockup-card-dot" style="background:linear-gradient(135deg,#0891b2,#14b8a6)"></div>
+                <div class="mockup-card-line"></div>
+                <div class="mockup-card-line"></div>
+              </div>
+              <div class="mockup-card">
+                <div class="mockup-card-dot" style="background:linear-gradient(135deg,#7c3aed,#0d9468)"></div>
+                <div class="mockup-card-line"></div>
+                <div class="mockup-card-line"></div>
+              </div>
+            </div>
+            <!-- Code preview area -->
+            <div style="margin-top:1.25rem;background:rgba(255,255,255,.03);border-radius:8px;padding:.85rem;border:1px solid rgba(255,255,255,.06)">
+              <div style="font-family:'Courier New',monospace;font-size:.68rem;line-height:1.7;color:#64748b">
+                <span style="color:#0d9468">const</span> <span style="color:#94a3b8">website</span> <span style="color:#64748b">=</span> {<br>
+                &nbsp;&nbsp;<span style="color:#14b8a6">modern</span>: <span style="color:#22c55e">true</span>,<br>
+                &nbsp;&nbsp;<span style="color:#14b8a6">fast</span>: <span style="color:#22c55e">true</span>,<br>
+                &nbsp;&nbsp;<span style="color:#14b8a6">premium</span>: <span style="color:#22c55e">true</span><br>
+                }
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Floating Tags -->
+        <div class="hero-tag tag-1" aria-hidden="true">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          SEO Optimized
+        </div>
+        <div class="hero-tag tag-2" aria-hidden="true">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          Fast & Responsive
+        </div>
+        <div class="hero-tag tag-3" aria-hidden="true">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="18" height="18" rx="2"/><polyline points="3 9 21 9"/></svg>
+          Modern Design
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       STATS SECTION
+  ══════════════════════════════════════════════════════════════ -->
+  <section id="stats" aria-label="Statistics">
+    <div class="stats-grid">
+      <div class="stat-card reveal delay-1">
+        <div class="stat-number" data-count="50" data-suffix="+" aria-label="50+ Projects">0+</div>
+        <div class="stat-label">Project Selesai</div>
+      </div>
+      <div class="stat-card reveal delay-2">
+        <div class="stat-number" data-count="30" data-suffix="+" aria-label="30+ Clients">0+</div>
+        <div class="stat-label">Klien Puas</div>
+      </div>
+      <div class="stat-card reveal delay-3">
+        <div class="stat-number" data-count="5" data-suffix="+" aria-label="5+ Years">0+</div>
+        <div class="stat-label">Tahun Pengalaman</div>
+      </div>
+      <div class="stat-card reveal delay-4">
+        <div class="stat-number" data-count="99" data-suffix="%" aria-label="99% Satisfaction">0%</div>
+        <div class="stat-label">Client Satisfaction</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       ABOUT SECTION
+  ══════════════════════════════════════════════════════════════ -->
+  <section id="about" class="section" aria-labelledby="about-title">
+    <div class="about-grid">
+
+      <!-- Left: Avatar -->
+      <div class="about-image-wrap reveal-left">
+        <div class="about-avatar" aria-label="Profile illustration">
+          <div class="about-avatar-inner">
+            <div class="about-avatar-icon" aria-hidden="true">👨‍💻</div>
+            <div class="about-avatar-code" aria-hidden="true">
+              &gt; Building the web<br>
+              &gt; one pixel at a time<br>
+              <span style="color:var(--accent)">■</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Floating badge cards -->
+        <div style="position:absolute;top:10%;right:-15%;background:var(--card);border:1px solid var(--border-col);border-radius:12px;padding:.75rem 1rem;box-shadow:0 8px 32px rgba(0,0,0,.12);font-size:.78rem;font-weight:700;color:var(--text);display:flex;align-items:center;gap:.5rem;animation:floatShape 5s ease-in-out infinite" aria-hidden="true">
+          <span style="font-size:1.1rem">⚡</span> Fast Delivery
+        </div>
+        <div style="position:absolute;bottom:15%;left:-12%;background:var(--card);border:1px solid var(--border-col);border-radius:12px;padding:.75rem 1rem;box-shadow:0 8px 32px rgba(0,0,0,.12);font-size:.78rem;font-weight:700;color:var(--text);display:flex;align-items:center;gap:.5rem;animation:floatShape 6s ease-in-out infinite;animation-delay:-2s" aria-hidden="true">
+          <span style="font-size:1.1rem">🎨</span> Clean Design
+        </div>
+      </div>
+
+      <!-- Right: Content -->
+      <div class="reveal-right">
+        <div class="section-label">Tentang Saya</div>
+        <h2 class="section-title" id="about-title">Crafting Digital<br>Experiences with Passion</h2>
+        <p class="section-sub">
+          Saya adalah seorang Web Developer dengan pengalaman lebih dari 5 tahun dalam membangun 
+          website profesional. Saya berfokus pada performa tinggi, desain modern, dan pengalaman 
+          pengguna yang mulus.
+        </p>
+
+        <!-- Badges -->
+        <div class="about-badges" role="list" aria-label="Skills">
+          <span class="about-badge" role="listitem">✓ Responsive</span>
+          <span class="about-badge" role="listitem">✓ SEO</span>
+          <span class="about-badge" role="listitem">✓ Fast</span>
+          <span class="about-badge" role="listitem">✓ UI/UX</span>
+          <span class="about-badge" role="listitem">✓ Accessibility</span>
+          <span class="about-badge" role="listitem">✓ Performance</span>
+        </div>
+
+        <!-- Timeline -->
+        <div class="timeline" aria-label="Career timeline">
+          <div class="timeline-item">
+            <div class="timeline-year">2019 – Sekarang</div>
+            <div class="timeline-title">Freelance Web Developer</div>
+            <div class="timeline-desc">Membantu berbagai klien dari bisnis kecil hingga perusahaan dalam membangun website profesional.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2021 – 2023</div>
+            <div class="timeline-title">Frontend Developer — TechAgency</div>
+            <div class="timeline-desc">Mengerjakan proyek-proyek berskala besar menggunakan teknologi modern.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2019</div>
+            <div class="timeline-title">Lulus S1 Teknik Informatika</div>
+            <div class="timeline-desc">Mulai karir sebagai developer dengan fokus pada web development dan UI/UX design.</div>
+          </div>
+        </div>
+
+        <!-- Skill Bars -->
+        <div class="skill-list" aria-label="Skill proficiency">
+          <div class="skill-item">
+            <div class="skill-top"><span>HTML & CSS</span><span>98%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-width="98" style="width:0%" role="progressbar" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-top"><span>JavaScript</span><span>92%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-width="92" style="width:0%" role="progressbar" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-top"><span>Next.js & Django</span><span>87%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-width="87" style="width:0%" role="progressbar" aria-valuenow="87" aria-valuemin="0" aria-valuemax="100"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-top"><span>UI/UX Design</span><span>85%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-width="85" style="width:0%" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       TECH STACK
+  ══════════════════════════════════════════════════════════════ -->
+  <section id="techstack" aria-labelledby="tech-title" style="background:var(--card);border-top:1px solid var(--border-col);border-bottom:1px solid var(--border-col)">
+    <div class="section">
+      <div class="text-center reveal">
+        <div class="section-label">Tech Stack</div>
+        <h2 class="section-title" id="tech-title">Tools & Teknologi</h2>
+        <p class="section-sub">Saya menggunakan teknologi terbaik untuk menghasilkan website berkualitas premium.</p>
+      </div>
+      <div class="tech-grid" role="list" aria-label="Technologies used">
+        <!-- HTML -->
+        <div class="tech-card reveal delay-1" role="listitem">
+          <div class="tech-icon" aria-hidden="true" style="color:#e34f26">
+            <svg viewBox="0 0 24 24" width="36" height="36" fill="currentColor"><path d="M4.136 3.012h15.729L18.426 17.78l-6.426 1.78-6.416-1.779L4.136 3.012zm13.22 2.424H6.645l.263 2.974h9.849l-.264 3.21H8.66l.264 3.003 3.074.854 3.081-.855.265-3.001h2.354l-.524 5.87-5.176 1.435-5.175-1.435-.794-8.87h-2.36l1.05 11.75 6.44 1.788 6.452-1.788 1.044-11.75h-2.358z"/></svg>
+          </div>
+          <div class="tech-name">HTML5</div>
+        </div>
+        <!-- CSS -->
+        <div class="tech-card reveal delay-2" role="listitem">
+          <div class="tech-icon" aria-hidden="true" style="color:#264de4">
+            <svg viewBox="0 0 24 24" width="36" height="36" fill="currentColor"><path d="M4.192 3.143h15.615l-1.42 16.034-6.404 1.812-6.38-1.812L4.192 3.143zM16.9 6.424l-9.8-.002.158 1.949 7.529.002-.189 2.02H9.66l.164 1.929h4.714l-.184 2.42-2.38.638-2.377-.637-.138-1.573h-1.93l.261 3.386 4.164 1.15 4.177-1.15.532-6.003.067-.975.898-9.154z"/></svg>
+          </div>
+          <div class="tech-name">CSS3</div>
+        </div>
+        <!-- Tailwind -->
+        <div class="tech-card reveal delay-3" role="listitem">
+          <div class="tech-icon" aria-hidden="true" style="color:#06b6d4">
+            <svg viewBox="0 0 24 24" width="36" height="36" fill="currentColor"><path d="M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C16.337 6.182 14.976 4.8 12.001 4.8zm-6 7.2c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624 1.177 1.194 2.538 2.576 5.512 2.576 3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C10.337 13.382 8.976 12 6.001 12z"/></svg>
+          </div>
+          <div class="tech-name">Tailwind</div>
+        </div>
+        <!-- JavaScript -->
+        <div class="tech-card reveal delay-4" role="listitem">
+          <div class="tech-icon" aria-hidden="true" style="color:#f7df1e;background:#000;border-radius:6px;padding:2px">
+            <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor"><path d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z"/></svg>
+          </div>
+          <div class="tech-name">JavaScript</div>
+        </div>
+        <!-- Next.js -->
+        <div class="tech-card reveal delay-5" role="listitem">
+          <div class="tech-icon" aria-hidden="true" style="color:#000000; background:#fff; border-radius:50%">
+            <svg viewBox="0 0 24 24" width="36" height="36" fill="currentColor"><path d="M14.407 15.658L9.07 8.082H7.25v7.836h1.564v-5.4l4.686 6.643c-3.834 2.125-8.685.735-10.81-3.1-2.126-3.834-.735-8.685 3.1-10.81 3.834-2.126 8.685-.735 10.81 3.1 1.704 3.072 1.348 6.942-.993 9.707zM12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm3.682 14.545v-8.463h-1.564v8.463h1.564z"/></svg>
+          </div>
+          <div class="tech-name">Next.js</div>
+        </div>
+        <!-- Django -->
+        <div class="tech-card reveal delay-6" role="listitem">
+          <div class="tech-icon" aria-hidden="true" style="color:#092E20">
+            <svg viewBox="0 0 24 24" width="36" height="36" fill="currentColor"><path d="M10.852 14.855c-.718 0-1.127-.47-1.127-1.424V7.79H7.603v5.823c0 1.95 1.118 3.13 2.923 3.13 1.332 0 2.222-.538 2.871-1.34V16.6h1.999v-8.81h-2.127v5.525c0 .684-.538 1.54-2.417 1.54M20.254 13.974c0-2.316-1.564-3.555-3.597-3.555-2.035 0-3.666 1.316-3.666 3.65 0 2.213 1.53 3.666 3.7 3.666 2.018 0 3.563-1.299 3.563-3.761m-2.112.137c0 1.257-.615 1.838-1.503 1.838-.856 0-1.514-.641-1.514-1.898 0-1.196.658-1.743 1.487-1.743.83 0 1.53.512 1.53 1.803M1.597 16.6h2.127V2.518H1.598V16.6zm0-16.6h2.127v1.846H1.598z"/></svg>
+          </div>
+          <div class="tech-name">Django</div>
+        </div>
+        <!-- MySQL -->
+        <div class="tech-card reveal delay-1" role="listitem">
+          <div class="tech-icon" aria-hidden="true" style="color:#00618a">
+            <svg viewBox="0 0 24 24" width="36" height="36" fill="currentColor"><path d="M16.405 5.501c-.115 0-.193.014-.274.033v.013h.014c.054.104.146.18.214.274.054.107.1.214.154.32l.014-.015c.094-.066.14-.172.14-.333-.04-.047-.046-.094-.08-.14-.04-.067-.1-.1-.18-.153zM5.77 18.695h-.927a50.854 50.854 0 00-.27-4.41h-.008l-1.41 4.41H2.45l-1.4-4.41h-.01a72.892 72.892 0 00-.195 4.41H0c.055-1.966.192-3.81.41-5.53h1.15l1.335 4.064h.008l1.347-4.064h1.095c.242 2.015.384 3.86.428 5.53zm4.017-4.08c-.378 2.45-.876 3.665-1.322 4.083-.36.327-.756.466-1.215.466-.11 0-.281-.033-.419-.066l.066-.707c.094.022.189.033.288.033.277 0 .52-.1.697-.3.204-.218.402-.61.56-1.216a.77.77 0 01-.428-.67l.787-4.3h.92zm8.107 4.08h-2.918v-5.53h.91v4.83h2.008zm4.413 0h-.952l-1.688-2.97h-.015c.018.37.023.764.023 1.23v1.74h-.82v-5.53h.934l1.677 2.95h.013c-.01-.286-.02-.682-.02-1.2v-1.75h.848v5.53zm.217-5.53v.69h-1.35v4.84h-.9v-4.84h-1.373v-.69h3.623zm.862 0h.92v2.2h2.16v-2.2h.92v5.53h-.92v-2.64h-2.16v2.64h-.92v-5.53zm4.44 0v.69h-1.35v4.84h-.9v-4.84h-1.373v-.69h3.623zm.862 0h2.8v.69h-1.882v1.51h1.77v.69h-1.77v1.95h1.92v.69h-2.838v-5.53z"/></svg>
+          </div>
+          <div class="tech-name">MySQL</div>
+        </div>
+        <!-- Git -->
+        <div class="tech-card reveal delay-2" role="listitem">
+          <div class="tech-icon" aria-hidden="true" style="color:#f05033">
+            <svg viewBox="0 0 24 24" width="36" height="36" fill="currentColor"><path d="M23.546 10.93L13.067.452c-.604-.603-1.582-.603-2.188 0L8.708 2.627l2.76 2.76c.645-.215 1.379-.07 1.889.441.516.515.658 1.258.438 1.9l2.658 2.66c.645-.223 1.387-.078 1.9.435.721.72.721 1.884 0 2.604-.719.719-1.881.719-2.6 0-.539-.541-.674-1.337-.404-1.996L12.86 8.955v6.525c.176.086.342.203.488.348.713.721.713 1.883 0 2.6-.719.721-1.889.721-2.609 0-.719-.719-.719-1.879 0-2.598.182-.18.387-.316.605-.406V8.835c-.217-.091-.424-.222-.604-.401-.545-.545-.676-1.342-.396-2.009L7.636 3.7.45 10.881c-.6.605-.6 1.584 0 2.189l10.48 10.477c.604.604 1.582.604 2.186 0l10.43-10.43c.605-.603.605-1.582 0-2.187"/></svg>
+          </div>
+          <div class="tech-name">Git</div>
+        </div>
+        <!-- GitHub -->
+        <div class="tech-card reveal delay-3" role="listitem">
+          <div class="tech-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="36" height="36" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+          </div>
+          <div class="tech-name">GitHub</div>
+        </div>
+        <!-- VS Code -->
+        <div class="tech-card reveal delay-4" role="listitem">
+          <div class="tech-icon" aria-hidden="true" style="color:#007acc">
+            <svg viewBox="0 0 24 24" width="36" height="36" fill="currentColor"><path d="M23.15 2.587L18.21.21a1.494 1.494 0 00-1.705.29l-9.46 8.63-4.12-3.128a.999.999 0 00-1.276.057L.327 7.261A1 1 0 00.326 8.74L3.899 12 .326 15.26a1 1 0 00.001 1.479L1.65 17.94a.999.999 0 001.276.057l4.12-3.128 9.46 8.63a1.492 1.492 0 001.704.29l4.942-2.377A1.5 1.5 0 0024 20.06V3.939a1.5 1.5 0 00-.85-1.352zm-5.146 14.861L10.826 12l7.178-5.448v10.896z"/></svg>
+          </div>
+          <div class="tech-name">VS Code</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       SERVICES SECTION
+  ══════════════════════════════════════════════════════════════ -->
+  <section id="services" class="section" aria-labelledby="services-title">
+    <div class="text-center reveal">
+      <div class="section-label">Layanan</div>
+      <h2 class="section-title" id="services-title">Apa yang Saya Tawarkan</h2>
+      <p class="section-sub">Layanan profesional untuk memenuhi berbagai kebutuhan digital Anda dengan kualitas premium.</p>
+    </div>
+
+    <div class="services-grid">
+
+      <!-- 1. Desain Grafis -->
+      <div class="service-card reveal delay-1" aria-labelledby="svc-1">
+        <div class="service-icon-wrap" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="13.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="10.5" r="2.5"/><circle cx="8.5" cy="7.5" r="2.5"/><circle cx="6.5" cy="12.5" r="2.5"/>
+            <path d="M12 22C6.5 22 2 17.5 2 12c0-1.22.21-2.39.6-3.47L12 22z"/>
+            <path d="M8 22c5.5 0 10-4.5 10-10 0-1.22-.21-2.39-.6-3.47L8 22z"/>
+          </svg>
+        </div>
+        <h3 class="service-title" id="svc-1">Desain Grafis</h3>
+        <p class="service-desc">Desain visual menarik untuk brand, sosial media, flyer, banner, dan materi pemasaran lainnya.</p>
+        <div class="service-arrow">
+          Lihat Detail
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </div>
+      </div>
+
+      <!-- 2. Landing Page -->
+      <div class="service-card reveal delay-2" aria-labelledby="svc-2">
+        <div class="service-icon-wrap" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>
+          </svg>
+        </div>
+        <h3 class="service-title" id="svc-2">Landing Page</h3>
+        <p class="service-desc">Halaman pemasaran yang dioptimalkan untuk konversi tinggi dan kesan pertama yang kuat.</p>
+        <div class="service-arrow">
+          Lihat Detail
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </div>
+      </div>
+
+      <!-- 3. Company Profile -->
+      <div class="service-card reveal delay-3" aria-labelledby="svc-3">
+        <div class="service-icon-wrap" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>
+          </svg>
+        </div>
+        <h3 class="service-title" id="svc-3">Company Profile</h3>
+        <p class="service-desc">Website representasi perusahaan yang profesional, informatif, dan membangun kepercayaan klien.</p>
+        <div class="service-arrow">
+          Lihat Detail
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </div>
+      </div>
+
+      <!-- 4. Website Sekolah -->
+      <div class="service-card reveal delay-4" aria-labelledby="svc-4">
+        <div class="service-icon-wrap" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/>
+          </svg>
+        </div>
+        <h3 class="service-title" id="svc-4">Website Sekolah</h3>
+        <p class="service-desc">Portal digital sekolah yang modern dengan fitur informasi, pengumuman, dan galeri kegiatan.</p>
+        <div class="service-arrow">
+          Lihat Detail
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </div>
+      </div>
+
+      <!-- 5. Website Organisasi -->
+      <div class="service-card reveal delay-5" aria-labelledby="svc-5">
+        <div class="service-icon-wrap" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/>
+          </svg>
+        </div>
+        <h3 class="service-title" id="svc-5">Website Organisasi</h3>
+        <p class="service-desc">Platform digital untuk komunitas dan organisasi yang memudahkan komunikasi antar anggota.</p>
+        <div class="service-arrow">
+          Lihat Detail
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </div>
+      </div>
+
+      <!-- 6. Website UMKM -->
+      <div class="service-card reveal delay-6" aria-labelledby="svc-6">
+        <div class="service-icon-wrap" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/>
+          </svg>
+        </div>
+        <h3 class="service-title" id="svc-6">Website UMKM</h3>
+        <p class="service-desc">Toko online dan profil bisnis untuk meningkatkan penjualan dan jangkauan pasar UMKM Anda.</p>
+        <div class="service-arrow">
+          Lihat Detail
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </div>
+      </div>
+
+      <!-- 7. Website Custom -->
+      <div class="service-card reveal delay-1" aria-labelledby="svc-7">
+        <div class="service-icon-wrap" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+          </svg>
+        </div>
+        <h3 class="service-title" id="svc-7">Website Custom</h3>
+        <p class="service-desc">Solusi web kustom yang dibangun sesuai kebutuhan spesifik bisnis Anda dari nol.</p>
+        <div class="service-arrow">
+          Lihat Detail
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </div>
+      </div>
+
+      <!-- 8. Maintenance -->
+      <div class="service-card reveal delay-2" aria-labelledby="svc-8">
+        <div class="service-icon-wrap" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+        </div>
+        <h3 class="service-title" id="svc-8">Maintenance Website</h3>
+        <p class="service-desc">Pemeliharaan rutin, update konten, perbaikan bug, dan optimasi performa website Anda.</p>
+        <div class="service-arrow">
+          Lihat Detail
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </div>
+      </div>
+
+      <!-- 9. SEO -->
+      <div class="service-card reveal delay-3" aria-labelledby="svc-9">
+        <div class="service-icon-wrap" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            <line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
+          </svg>
+        </div>
+        <h3 class="service-title" id="svc-9">SEO Optimization</h3>
+        <p class="service-desc">Optimalkan website Anda agar mudah ditemukan di Google dan meningkatkan traffic organik.</p>
+        <div class="service-arrow">
+          Lihat Detail
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       WORKFLOW SECTION
+  ══════════════════════════════════════════════════════════════ -->
+  <section id="workflow" style="background:var(--card);border-top:1px solid var(--border-col);border-bottom:1px solid var(--border-col)" aria-labelledby="workflow-title">
+    <div class="section" style="display:grid;grid-template-columns:1fr 1.4fr;gap:5rem;align-items:start">
+      <div class="reveal-left">
+        <div class="section-label">Proses Kerja</div>
+        <h2 class="section-title" id="workflow-title">Cara Saya Bekerja</h2>
+        <p class="section-sub">Proses yang terstruktur memastikan setiap project selesai tepat waktu dengan kualitas terbaik.</p>
+        <div style="margin-top:2rem">
+          <a href="#contact" class="btn-primary" id="workflow-cta">
+            <span>Mulai Project</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="position:relative;z-index:1"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="workflow-wrap reveal-right">
+        <div class="workflow-item">
+          <div class="workflow-num" aria-hidden="true">01</div>
+          <div class="workflow-content">
+            <div class="workflow-title">Konsultasi</div>
+            <div class="workflow-desc">Diskusi mendalam tentang kebutuhan, tujuan, target audiens, dan anggaran project Anda.</div>
+            <div class="workflow-tag">Free Consultation</div>
+          </div>
+        </div>
+        <div class="workflow-item">
+          <div class="workflow-num" aria-hidden="true">02</div>
+          <div class="workflow-content">
+            <div class="workflow-title">Desain</div>
+            <div class="workflow-desc">Membuat wireframe dan mockup desain visual yang modern sesuai identitas brand Anda.</div>
+            <div class="workflow-tag">UI/UX Design</div>
+          </div>
+        </div>
+        <div class="workflow-item">
+          <div class="workflow-num" aria-hidden="true">03</div>
+          <div class="workflow-content">
+            <div class="workflow-title">Development</div>
+            <div class="workflow-desc">Coding website dengan teknologi modern, memastikan performa cepat dan responsif di semua device.</div>
+            <div class="workflow-tag">Clean Code</div>
+          </div>
+        </div>
+        <div class="workflow-item">
+          <div class="workflow-num" aria-hidden="true">04</div>
+          <div class="workflow-content">
+            <div class="workflow-title">Revisi</div>
+            <div class="workflow-desc">Perbaikan berdasarkan feedback Anda hingga hasil akhir memenuhi ekspektasi sepenuhnya.</div>
+            <div class="workflow-tag">Unlimited Revision</div>
+          </div>
+        </div>
+        <div class="workflow-item">
+          <div class="workflow-num" aria-hidden="true">05</div>
+          <div class="workflow-content">
+            <div class="workflow-title">Launch</div>
+            <div class="workflow-desc">Deployment website ke server dengan konfigurasi optimal dan pengujian final menyeluruh.</div>
+            <div class="workflow-tag">Go Live</div>
+          </div>
+        </div>
+        <div class="workflow-item">
+          <div class="workflow-num" aria-hidden="true">06</div>
+          <div class="workflow-content">
+            <div class="workflow-title">Support</div>
+            <div class="workflow-desc">Dukungan after-sales untuk memastikan website berjalan lancar dan performa optimal.</div>
+            <div class="workflow-tag">After Sales Support</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       PORTFOLIO SECTION
+  ══════════════════════════════════════════════════════════════ -->
+  <section id="portfolio" class="section" aria-labelledby="portfolio-title">
+    <div class="text-center reveal">
+      <div class="section-label">Portfolio</div>
+      <h2 class="section-title" id="portfolio-title">Karya Terbaik Saya</h2>
+      <p class="section-sub">Koleksi project terpilih yang mencerminkan standar kualitas dan kreativitas saya.</p>
+    </div>
+
+    <!-- Filter -->
+    <div class="portfolio-filter reveal" role="group" aria-label="Portfolio filter">
+      <button class="filter-btn active" data-filter="all" aria-pressed="true">Semua</button>
+      <button class="filter-btn" data-filter="landing"  aria-pressed="false">Landing Page</button>
+      <button class="filter-btn" data-filter="company"  aria-pressed="false">Company Profile</button>
+      <button class="filter-btn" data-filter="school"   aria-pressed="false">Website Sekolah</button>
+      <button class="filter-btn" data-filter="umkm"     aria-pressed="false">UMKM</button>
+      <button class="filter-btn" data-filter="custom"   aria-pressed="false">Custom</button>
+    </div>
+
+    <!-- Grid -->
+    <div class="portfolio-grid">
+
+      <!-- Card 1 -->
+      <div class="portfolio-card reveal delay-1" data-category="landing">
+        <div class="portfolio-thumb">
+          <div class="portfolio-thumb-bg" style="background:linear-gradient(135deg,#0d9468 0%,#0891b2 50%,#7c3aed 100%);display:flex;align-items:center;justify-content:center">
+            <div style="text-align:center;color:rgba(255,255,255,.3)">
+              <div style="font-size:3.5rem;font-family:'Space Grotesk',sans-serif;font-weight:800;letter-spacing:-0.04em">APEX</div>
+              <div style="font-size:.85rem;letter-spacing:.2em;text-transform:uppercase;margin-top:.3rem">SaaS Platform</div>
+            </div>
+          </div>
+          <div class="portfolio-overlay">
+            <a href="#" class="portfolio-preview-btn" aria-label="Preview APEX SaaS">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              Preview
+            </a>
+          </div>
+        </div>
+        <div class="portfolio-info">
+          <div class="portfolio-cat">Landing Page</div>
+          <div class="portfolio-title">APEX — SaaS Analytics Platform</div>
+          <div class="portfolio-tags">
+            <span class="portfolio-tag">Tailwind CSS</span>
+            <span class="portfolio-tag">JavaScript</span>
+            <span class="portfolio-tag">Animation</span>
+            <span class="portfolio-tag">Responsive</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="portfolio-card reveal delay-2" data-category="company">
+        <div class="portfolio-thumb">
+          <div class="portfolio-thumb-bg" style="background:linear-gradient(135deg,#1e293b,#334155);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:.5rem">
+            <div style="width:48px;height:48px;background:linear-gradient(135deg,#0d9468,#14b8a6);border-radius:12px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:1.2rem">PT</div>
+            <div style="color:rgba(255,255,255,.4);font-size:.75rem;letter-spacing:.15em;text-transform:uppercase">Company Profile</div>
+          </div>
+          <div class="portfolio-overlay">
+            <a href="#" class="portfolio-preview-btn" aria-label="Preview PT Maju Bersama">Preview</a>
+          </div>
+        </div>
+        <div class="portfolio-info">
+          <div class="portfolio-cat">Company Profile</div>
+          <div class="portfolio-title">PT Maju Bersama — Corporate</div>
+          <div class="portfolio-tags">
+            <span class="portfolio-tag">Next.js</span>
+            <span class="portfolio-tag">MySQL</span>
+            <span class="portfolio-tag">Admin Panel</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="portfolio-card reveal delay-3" data-category="school">
+        <div class="portfolio-thumb">
+          <div class="portfolio-thumb-bg" style="background:linear-gradient(135deg,#0c4a6e,#0284c7);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:.5rem">
+            <div style="font-size:2.5rem">🎓</div>
+            <div style="color:rgba(255,255,255,.5);font-size:.7rem;letter-spacing:.15em;text-transform:uppercase">School Website</div>
+          </div>
+          <div class="portfolio-overlay">
+            <a href="#" class="portfolio-preview-btn" aria-label="Preview SMA Negeri 1">Preview</a>
+          </div>
+        </div>
+        <div class="portfolio-info">
+          <div class="portfolio-cat">Website Sekolah</div>
+          <div class="portfolio-title">SMA Negeri 1 — Portal Akademik</div>
+          <div class="portfolio-tags">
+            <span class="portfolio-tag">Django</span>
+            <span class="portfolio-tag">MySQL</span>
+            <span class="portfolio-tag">Responsive</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="portfolio-card reveal delay-1" data-category="umkm">
+        <div class="portfolio-thumb">
+          <div class="portfolio-thumb-bg" style="background:linear-gradient(135deg,#431407,#7c2d12);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:.5rem">
+            <div style="font-size:2.5rem">☕</div>
+            <div style="color:rgba(255,255,255,.5);font-size:.7rem;letter-spacing:.15em;text-transform:uppercase">UMKM Store</div>
+          </div>
+          <div class="portfolio-overlay">
+            <a href="#" class="portfolio-preview-btn" aria-label="Preview Kedai Kopi">Preview</a>
+          </div>
+        </div>
+        <div class="portfolio-info">
+          <div class="portfolio-cat">Website UMKM</div>
+          <div class="portfolio-title">Kopi Nusantara — Kedai Online</div>
+          <div class="portfolio-tags">
+            <span class="portfolio-tag">HTML</span>
+            <span class="portfolio-tag">Tailwind</span>
+            <span class="portfolio-tag">WhatsApp API</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="portfolio-card reveal delay-2" data-category="custom">
+        <div class="portfolio-thumb">
+          <div class="portfolio-thumb-bg" style="background:linear-gradient(135deg,#1e1b4b,#4c1d95);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:.5rem">
+            <div style="font-size:2.5rem">📊</div>
+            <div style="color:rgba(255,255,255,.5);font-size:.7rem;letter-spacing:.15em;text-transform:uppercase">Dashboard App</div>
+          </div>
+          <div class="portfolio-overlay">
+            <a href="#" class="portfolio-preview-btn" aria-label="Preview DataVis Dashboard">Preview</a>
+          </div>
+        </div>
+        <div class="portfolio-info">
+          <div class="portfolio-cat">Custom Web App</div>
+          <div class="portfolio-title">DataVis — Analytics Dashboard</div>
+          <div class="portfolio-tags">
+            <span class="portfolio-tag">Next.js</span>
+            <span class="portfolio-tag">Chart.js</span>
+            <span class="portfolio-tag">Real-time</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="portfolio-card reveal delay-3" data-category="landing">
+        <div class="portfolio-thumb">
+          <div class="portfolio-thumb-bg" style="background:linear-gradient(135deg,#042f2e,#134e4a,#0d9468);display:flex;align-items:center;justify-content:center">
+            <div style="text-align:center;color:rgba(255,255,255,.3)">
+              <div style="font-size:3rem;font-family:'Space Grotesk',sans-serif;font-weight:800;letter-spacing:-0.04em">GreenTech</div>
+              <div style="font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;margin-top:.3rem">Startup Landing</div>
+            </div>
+          </div>
+          <div class="portfolio-overlay">
+            <a href="#" class="portfolio-preview-btn" aria-label="Preview GreenTech Startup">Preview</a>
+          </div>
+        </div>
+        <div class="portfolio-info">
+          <div class="portfolio-cat">Landing Page</div>
+          <div class="portfolio-title">GreenTech — Sustainable Startup Landing</div>
+          <div class="portfolio-tags">
+            <span class="portfolio-tag">HTML/CSS</span>
+            <span class="portfolio-tag">JavaScript</span>
+            <span class="portfolio-tag">SEO</span>
+            <span class="portfolio-tag">Animation</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       WHY CHOOSE ME
+  ══════════════════════════════════════════════════════════════ -->
+  <section id="why" style="background:var(--card);border-top:1px solid var(--border-col);border-bottom:1px solid var(--border-col)" aria-labelledby="why-title">
+    <div class="section">
+      <div class="text-center reveal">
+        <div class="section-label">Keunggulan</div>
+        <h2 class="section-title" id="why-title">Mengapa Memilih Saya?</h2>
+        <p class="section-sub">Komitmen saya untuk kualitas terbaik di setiap aspek pekerjaan.</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-card reveal delay-1">
+          <span class="why-icon" aria-hidden="true">🎨</span>
+          <div class="why-title">Desain Modern</div>
+          <p class="why-desc">Setiap website dirancang dengan estetika tinggi mengikuti tren desain terkini tahun 2026.</p>
+        </div>
+        <div class="why-card reveal delay-2">
+          <span class="why-icon" aria-hidden="true">⚡</span>
+          <div class="why-title">Website Cepat</div>
+          <p class="why-desc">Dioptimalkan untuk kecepatan loading tercepat dengan skor PageSpeed Insights di atas 90.</p>
+        </div>
+        <div class="why-card reveal delay-3">
+          <span class="why-icon" aria-hidden="true">🔍</span>
+          <div class="why-title">SEO Friendly</div>
+          <p class="why-desc">Struktur teknis SEO yang solid memastikan website Anda mudah ditemukan di mesin pencari.</p>
+        </div>
+        <div class="why-card reveal delay-4">
+          <span class="why-icon" aria-hidden="true">📱</span>
+          <div class="why-title">Responsive</div>
+          <p class="why-desc">Tampilan sempurna di semua perangkat — desktop, tablet, dan smartphone tanpa kompromi.</p>
+        </div>
+        <div class="why-card reveal delay-5">
+          <span class="why-icon" aria-hidden="true">🛡️</span>
+          <div class="why-title">After Sales Support</div>
+          <p class="why-desc">Dukungan penuh setelah website live, termasuk training penggunaan dan perbaikan bug.</p>
+        </div>
+        <div class="why-card reveal delay-6">
+          <span class="why-icon" aria-hidden="true">💎</span>
+          <div class="why-title">Harga Kompetitif</div>
+          <p class="why-desc">Kualitas premium dengan harga yang terjangkau dan transparan, tanpa biaya tersembunyi.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       TESTIMONIALS
+  ══════════════════════════════════════════════════════════════ -->
+  <section id="testimonials" class="section" aria-labelledby="testimonials-title">
+    <div class="text-center reveal">
+      <div class="section-label">Testimoni</div>
+      <h2 class="section-title" id="testimonials-title">Apa Kata Klien Saya?</h2>
+      <p class="section-sub">Kepercayaan klien adalah aset terbesar saya.</p>
+    </div>
+    <div class="testimonial-slider reveal">
+      <div class="testimonial-track" id="testimonial-track">
+
+        <!-- T1 -->
+        <div class="testimonial-card">
+          <div class="testimonial-stars" aria-label="5 stars">⭐⭐⭐⭐⭐</div>
+          <div class="testimonial-quote">"Website company profile kami jauh melebihi ekspektasi. Desainnya sangat premium, loading-nya super cepat, dan hasilnya membuat klien kami terkesan sejak pertama kali melihat!"</div>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar" style="background:linear-gradient(135deg,#0d9468,#14b8a6)" aria-hidden="true">B</div>
+            <div>
+              <div class="testimonial-name">Budi Santoso</div>
+              <div class="testimonial-role">CEO, PT Makmur Jaya</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- T2 -->
+        <div class="testimonial-card">
+          <div class="testimonial-stars" aria-label="5 stars">⭐⭐⭐⭐⭐</div>
+          <div class="testimonial-quote">"Landing page yang dibuat sangat profesional dan berhasil meningkatkan konversi penjualan kami hingga 3x lipat. Komunikasi responsif dan pengerjaan cepat!"</div>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar" style="background:linear-gradient(135deg,#7c3aed,#a855f7)" aria-hidden="true">S</div>
+            <div>
+              <div class="testimonial-name">Sari Dewi</div>
+              <div class="testimonial-role">Owner, Butik Elegan</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- T3 -->
+        <div class="testimonial-card">
+          <div class="testimonial-stars" aria-label="5 stars">⭐⭐⭐⭐⭐</div>
+          <div class="testimonial-quote">"Website sekolah kami kini tampil modern dan informatif. Orang tua murid sangat senang dengan kemudahan akses informasi. Terima kasih banyak!"</div>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar" style="background:linear-gradient(135deg,#0891b2,#0ea5e9)" aria-hidden="true">A</div>
+            <div>
+              <div class="testimonial-name">Ahmad Fauzi</div>
+              <div class="testimonial-role">Kepala Sekolah, SMA N 5</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- T4 -->
+        <div class="testimonial-card">
+          <div class="testimonial-stars" aria-label="5 stars">⭐⭐⭐⭐⭐</div>
+          <div class="testimonial-quote">"Revisi tidak terbatas dan support after sales yang luar biasa. Website UMKM kami kini punya tampilan sekelas brand nasional. Sangat merekomendasikan!"</div>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar" style="background:linear-gradient(135deg,#d97706,#f59e0b)" aria-hidden="true">R</div>
+            <div>
+              <div class="testimonial-name">Rina Marlina</div>
+              <div class="testimonial-role">Owner, Dapur Ibu Rina</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- T5 -->
+        <div class="testimonial-card">
+          <div class="testimonial-stars" aria-label="5 stars">⭐⭐⭐⭐⭐</div>
+          <div class="testimonial-quote">"Dashboard analytics yang dibangun sangat powerful dan user-friendly. Tim kami kini bisa memantau data bisnis secara real-time dengan mudah."</div>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar" style="background:linear-gradient(135deg,#dc2626,#ef4444)" aria-hidden="true">H</div>
+            <div>
+              <div class="testimonial-name">Hendra Wijaya</div>
+              <div class="testimonial-role">CTO, DataCorp Indonesia</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- T6 -->
+        <div class="testimonial-card">
+          <div class="testimonial-stars" aria-label="5 stars">⭐⭐⭐⭐⭐</div>
+          <div class="testimonial-quote">"Harga sangat terjangkau untuk kualitas yang ditawarkan. Website organisasi kami kini jadi kebanggaan anggota. Proses pengerjaan transparan dan tepat waktu!"</div>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar" style="background:linear-gradient(135deg,#059669,#10b981)" aria-hidden="true">M</div>
+            <div>
+              <div class="testimonial-name">Maya Kusuma</div>
+              <div class="testimonial-role">Ketua, Komunitas Kreatif</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Controls -->
+      <div class="slider-controls" role="group" aria-label="Testimonial navigation">
+        <button id="slider-prev" class="slider-btn" aria-label="Previous testimonial">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <div class="slider-dots" role="tablist" aria-label="Testimonial slides">
+          <div class="slider-dot active" role="tab" aria-selected="true" aria-label="Slide 1"></div>
+          <div class="slider-dot" role="tab" aria-selected="false" aria-label="Slide 2"></div>
+          <div class="slider-dot" role="tab" aria-selected="false" aria-label="Slide 3"></div>
+          <div class="slider-dot" role="tab" aria-selected="false" aria-label="Slide 4"></div>
+          <div class="slider-dot" role="tab" aria-selected="false" aria-label="Slide 5"></div>
+          <div class="slider-dot" role="tab" aria-selected="false" aria-label="Slide 6"></div>
+        </div>
+        <button id="slider-next" class="slider-btn" aria-label="Next testimonial">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       FAQ SECTION
+  ══════════════════════════════════════════════════════════════ -->
+  <section id="faq" style="background:var(--card);border-top:1px solid var(--border-col);border-bottom:1px solid var(--border-col)" aria-labelledby="faq-title">
+    <div class="section" style="max-width:860px">
+      <div class="text-center reveal">
+        <div class="section-label">FAQ</div>
+        <h2 class="section-title" id="faq-title">Pertanyaan yang Sering Ditanyakan</h2>
+        <p class="section-sub">Jawaban untuk pertanyaan umum seputar layanan saya.</p>
+      </div>
+      <div class="faq-list reveal" role="list">
+
+        <div class="faq-item" role="listitem">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-ans-1" id="faq-q-1">
+            <span class="faq-question-text">Berapa lama waktu pengerjaan website?</span>
+            <div class="faq-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </div>
+          </button>
+          <div class="faq-answer" id="faq-ans-1" role="region" aria-labelledby="faq-q-1">
+            <p>Tergantung kompleksitas project. Landing page sederhana: 3-5 hari kerja. Company profile: 7-14 hari. Website custom dengan fitur kompleks: 3-6 minggu. Timeline pasti akan didiskusikan saat konsultasi awal.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="listitem">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-ans-2" id="faq-q-2">
+            <span class="faq-question-text">Berapa harga pembuatan website?</span>
+            <div class="faq-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </div>
+          </button>
+          <div class="faq-answer" id="faq-ans-2" role="region" aria-labelledby="faq-q-2">
+            <p>Harga bervariasi tergantung kebutuhan. Landing page mulai dari Rp 500rb, company profile mulai dari Rp 1,5jt, website custom mulai dari Rp 3jt. Hubungi saya untuk mendapatkan penawaran yang sesuai anggaran Anda.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="listitem">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-ans-3" id="faq-q-3">
+            <span class="faq-question-text">Apakah website bisa diupdate sendiri?</span>
+            <div class="faq-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </div>
+          </button>
+          <div class="faq-answer" id="faq-ans-3" role="region" aria-labelledby="faq-q-3">
+            <p>Ya! Setiap website dilengkapi dengan panel admin yang mudah digunakan sehingga Anda bisa mengupdate konten, gambar, dan teks sendiri tanpa perlu keahlian coding. Saya juga menyediakan training penggunaan admin panel.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="listitem">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-ans-4" id="faq-q-4">
+            <span class="faq-question-text">Apakah website responsive di mobile?</span>
+            <div class="faq-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </div>
+          </button>
+          <div class="faq-answer" id="faq-ans-4" role="region" aria-labelledby="faq-q-4">
+            <p>Tentu! Semua website yang saya buat menggunakan pendekatan mobile-first design yang memastikan tampilan optimal di semua ukuran layar mulai dari smartphone, tablet, hingga desktop.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="listitem">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-ans-5" id="faq-q-5">
+            <span class="faq-question-text">Berapa banyak revisi yang tersedia?</span>
+            <div class="faq-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </div>
+          </button>
+          <div class="faq-answer" id="faq-ans-5" role="region" aria-labelledby="faq-q-5">
+            <p>Saya menawarkan revisi tidak terbatas selama masa pengerjaan project hingga Anda benar-benar puas dengan hasilnya. Kepuasan klien adalah prioritas utama saya.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="listitem">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-ans-6" id="faq-q-6">
+            <span class="faq-question-text">Apakah termasuk hosting dan domain?</span>
+            <div class="faq-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </div>
+          </button>
+          <div class="faq-answer" id="faq-ans-6" role="region" aria-labelledby="faq-q-6">
+            <p>Beberapa paket sudah termasuk hosting dan domain. Saya juga bisa membantu setup hosting dan domain milik Anda. Detail ini akan dibahas saat konsultasi sesuai kebutuhan dan budget Anda.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="listitem">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-ans-7" id="faq-q-7">
+            <span class="faq-question-text">Bagaimana cara pembayaran?</span>
+            <div class="faq-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </div>
+          </button>
+          <div class="faq-answer" id="faq-ans-7" role="region" aria-labelledby="faq-q-7">
+            <p>Pembayaran dilakukan 2 tahap: DP 50% di awal untuk memulai project dan pelunasan 50% setelah project selesai dan disetujui. Metode pembayaran tersedia via transfer bank, GoPay, OVO, dan DANA.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="listitem">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-ans-8" id="faq-q-8">
+            <span class="faq-question-text">Apakah ada garansi after-sales?</span>
+            <div class="faq-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </div>
+          </button>
+          <div class="faq-answer" id="faq-ans-8" role="region" aria-labelledby="faq-q-8">
+            <p>Ya! Saya menyediakan garansi 1 bulan untuk perbaikan bug dan error setelah website live. Selain itu, saya siap membantu untuk update konten dan maintenance dengan paket harga yang sangat terjangkau.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       CTA SECTION
+  ══════════════════════════════════════════════════════════════ -->
+  <section id="cta" aria-labelledby="cta-title">
+    <div class="cta-inner reveal-scale">
+      <div class="cta-glow-1" aria-hidden="true"></div>
+      <div class="cta-glow-2" aria-hidden="true"></div>
+      <div class="cta-label">Siap Berkolaborasi?</div>
+      <h2 class="cta-title" id="cta-title">
+        Siap Membangun Website<br>
+        Profesional Anda?
+      </h2>
+      <p class="cta-sub">Konsultasi gratis, tanpa komitmen. Mari wujudkan visi digital Anda bersama saya.</p>
+      <a href="#contact" class="btn-white" id="cta-contact-btn" aria-label="Hubungi Saya sekarang">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.63A2 2 0 012.18 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.15a16 16 0 006.29 6.29l1.51-1.51a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 15z"/>
+        </svg>
+        Hubungi Saya Sekarang
+      </a>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       CONTACT SECTION
+  ══════════════════════════════════════════════════════════════ -->
+  <section id="contact" class="section" aria-labelledby="contact-title">
+    <div class="text-center reveal">
+      <div class="section-label">Kontak</div>
+      <h2 class="section-title" id="contact-title">Mari Terhubung</h2>
+      <p class="section-sub">Pilih channel komunikasi yang paling nyaman untuk Anda. Saya siap merespons dengan cepat!</p>
+    </div>
+    <div class="contact-grid">
+
+      <!-- Instagram -->
+      <a href="https://instagram.com/devstudio" target="_blank" rel="noopener noreferrer" class="contact-card reveal delay-1" aria-label="Follow on Instagram" style="--primary-accent:rgba(225,48,108,.3)">
+        <div class="contact-icon" style="background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045)" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" fill="none" stroke="white" stroke-width="2"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="white" stroke-width="2"/>
+          </svg>
+        </div>
+        <div class="contact-label">Instagram</div>
+        <div class="contact-handle">@devstudio</div>
+      </a>
+
+      <!-- WhatsApp -->
+      <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" class="contact-card reveal delay-2" aria-label="Chat on WhatsApp" style="--primary-accent:rgba(37,211,102,.3)">
+        <div class="contact-icon" style="background:#25d366" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+        </div>
+        <div class="contact-label">WhatsApp</div>
+        <div class="contact-handle">+62 812-3456-7890</div>
+      </a>
+
+      <!-- GitHub -->
+      <a href="https://github.com/devstudio" target="_blank" rel="noopener noreferrer" class="contact-card reveal delay-3" aria-label="View on GitHub" style="--primary-accent:rgba(255,255,255,.1)">
+        <div class="contact-icon" style="background:#24292e" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
+            <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+          </svg>
+        </div>
+        <div class="contact-label">GitHub</div>
+        <div class="contact-handle">github.com/devstudio</div>
+      </a>
+
+      <!-- LinkedIn -->
+      <a href="https://linkedin.com/in/devstudio" target="_blank" rel="noopener noreferrer" class="contact-card reveal delay-4" aria-label="Connect on LinkedIn" style="--primary-accent:rgba(0,119,181,.3)">
+        <div class="contact-icon" style="background:#0077b5" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+          </svg>
+        </div>
+        <div class="contact-label">LinkedIn</div>
+        <div class="contact-handle">in/devstudio</div>
+      </a>
+
+      <!-- Email -->
+      <a href="mailto:hello@devstudio.dev" class="contact-card reveal delay-5" aria-label="Send Email" style="--primary-accent:rgba(13,148,104,.3)">
+        <div class="contact-icon" style="background:linear-gradient(135deg,#0d9468,#14b8a6)" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
+          </svg>
+        </div>
+        <div class="contact-label">Email</div>
+        <div class="contact-handle">hello@devstudio.dev</div>
+      </a>
+
+    </div>
+  </section>
+
+  </main><!-- /main -->
+
+  <!-- ═══════════════════════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════════════════════════ -->
+  <footer role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-copy">
+        © <span id="footer-year">2026</span> DevStudio. All rights reserved.
+      </div>
+      <div class="footer-links">
+        <a href="#hero"    class="footer-link">Home</a>
+        <a href="#about"   class="footer-link">About</a>
+        <a href="#contact" class="footer-link">Contact</a>
+      </div>
+      <button id="back-top" class="back-top" aria-label="Back to top">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="18 15 12 9 6 15"/>
+        </svg>
+      </button>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="js/script.js" defer></script>
+
+</body>
+</html>
